@@ -1,0 +1,34 @@
+.card {
+    background-color: #3cacad;
+    height: 380px;
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.product_img {
+    height: 250px;
+    width: 200px;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+.bottom {
+    margin: 0 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+
+    &__price {
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+
+.product-name {
+    margin: 20px auto;
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+}

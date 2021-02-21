@@ -1,0 +1,94 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-side {
+    display: flex;
+    flex-direction: column;
+}
+.line {
+    width: 99%;
+}
+.title {
+    font-family: 'Amatic SC', cursive;
+    font-size: 40px;
+    margin: 20px auto;
+    
+}
+
+.product-list {
+    display: flex;
+    flex-direction: column;
+    
+
+    &__item {
+        border-bottom: solid 1px;
+        display: flex;
+        flex-direction: row;
+        margin: 10px 15px;
+    }
+}
+
+.image-cont {
+    width: 15%;
+}
+
+.item-img {
+    height: 90px;
+    width: 90px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.name-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    margin: 0 5px;
+}
+
+.name {
+    font-size: 20px;
+}
+
+.amount {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 20%;
+    justify-content: center;
+}
+
+.amount-btn {
+    margin: 0 10px;
+}
+
+.price {
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    width: 25%;
+    justify-content: center;
+}
+
+.remove-side {
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    width: 10%;
+}
+
+.total-price {
+    display: flex;
+    flex-direction: row;
+    margin: 0 15px;
+    justify-content: space-between;
+
+    &__label {
+        margin: 10px 15px;
+        font-family: 'Amatic SC', cursive;
+        font-size: 40px;
+    }
+}

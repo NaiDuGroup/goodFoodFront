@@ -1,0 +1,58 @@
+<div *ngIf="cartItems.length > 0; else elseBlock" class="container">
+    <div class="title-side">
+        <span class="title">Ваш заказ</span>
+        <hr class="line">
+    </div>
+    <div class="product-list">
+        <div *ngFor="let product of cartItems" class="product-list__item">
+            <div class="image-cont">
+                <img class="item-img" src="{{product.itemPictureUrl}}">
+            </div>
+            <div class="name-desc">
+                <span class="name">{{product.itemLabel}}</span>
+                <span class="desc">{{product.itemDescription}}</span>
+            </div>
+            <div class="amount">
+                <button
+                    (click)="subOneFromCart(product)"
+                    class="amount-btn" 
+                    mat-mini-fab 
+                    color="accent">
+                    <mat-icon>exposure_neg_1</mat-icon>
+                  </button>
+                x{{productCountMap[product.itemId]}}
+                
+                <button
+                    (click)="addOneToCart(product)"
+                    class="amount-btn"
+                    mat-mini-fab 
+                    color="accent">
+                    <mat-icon>exposure_plus_1</mat-icon>
+                  </button>
+            </div>
+
+            <div class="price">
+                <span>{{productCountMap[product.itemId]}} x {{product.itemPrice}} mdl</span>
+            </div>
+            
+            <div class="remove-side">
+                <button 
+                    mat-mini-fab 
+                    color="warn"
+                    (click)="deleteItem(product)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="total-price">
+        <span class="total-price__label">Итого</span>
+        <span class="total-price__label">{{totalPrice}} mdl  </span>
+    </div>
+     
+</div>
+<ng-template #elseBlock>
+    <div class="container">
+        <span class="title">Ваша корзина пустая</span>
+    </div>
+</ng-template>

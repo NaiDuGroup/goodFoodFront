@@ -1,0 +1,18 @@
+<div class="product-list">
+
+    <div class="category-name">
+        <span *ngIf="categoryId == 1">Супы</span>
+        <span *ngIf="categoryId == 2">Вторые блюда</span>
+        <span *ngIf="categoryId == 3">Завтраки</span>
+        <span *ngIf="categoryId == 4">Десерты</span>
+    </div>
+
+
+    <div class="list">
+        <app-product-card *ngFor="let product of products"
+            class="list__item"
+            [product] = "product">
+        </app-product-card>
+    </div>
+
+</div>

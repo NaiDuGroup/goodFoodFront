@@ -1,0 +1,12 @@
+<div class="card">
+    <img class="product_img" src="{{product.itemPictureUrl}}">
+    <span class="product-name">{{product.itemLabel}}</span>
+    <div class="bottom">
+        <span class="bottom__price">{{product.itemPrice}} mdl</span>
+        <button 
+            (click)="addToShoppingCart(product)"
+            mat-raised-button color="warn">
+            Добавить +
+        </button>
+    </div>
+</div>
